@@ -41,6 +41,9 @@ if [ $fabric_beta_distribution_notification == "No" ] ; then
 	fabric_beta_distribution_notification=false
 fi
 
+pwd
+ls -l
+
 java -jar ./crashlytics/crashlytics-devtools.jar \
  -apiKey $fabric_api_key \
  -apiSecret $fabric_build_secret \
