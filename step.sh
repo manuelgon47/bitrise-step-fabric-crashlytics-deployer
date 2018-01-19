@@ -43,6 +43,7 @@ fi
 
 wget https://github.com/manuelgon47/bitrise-step-fabric-crashlytics-deployer/blob/master/crashlytics/crashlytics-devtools.jar
 chmod a+x crashlytics-devtools.jar
+ls -la
 
 java -jar ./crashlytics-devtools.jar \
  -apiKey $fabric_api_key \
