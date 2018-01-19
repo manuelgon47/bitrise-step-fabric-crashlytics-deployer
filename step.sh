@@ -46,11 +46,14 @@ unzip crashlytics.zip
 chmod a+x ./crashlytics/crashlytics-devtools.jar
 ls -la
 
-java -jar ./crashlytics/crashlytics-devtools.jar \
- -apiKey $fabric_api_key \
- -apiSecret $fabric_build_secret \
- -uploadDist $fabric_apk_path \
- -androidRes $fabric_android_res \
- -androidManifest $fabric_android_manifest \
- -betaDistributionNotifications $fabric_beta_distribution_notification
-# -betaDistributionGroupAliases $fabric_beta_distribution_list
+command=`java -jar ./crashlytics/crashlytics-devtools.jar `
+command+=` -apiKey $fabric_api_key `
+command+=` -apiSecret $fabric_build_secret `
+command+=` -uploadDist $fabric_apk_path `
+command+=` -androidRes $fabric_android_res `
+command+=` -androidManifest $fabric_android_manifest `
+command+=` -betaDistributionNotifications $fabric_beta_distribution_notification `
+#if [ $fabric_beta_distribution_notification == "Yes" ] ; then
+#command+=` -betaDistributionGroupAliases $fabric_beta_distribution_list`
+#fi
+echo "$command"
