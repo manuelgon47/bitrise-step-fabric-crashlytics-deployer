@@ -41,10 +41,10 @@ if [ $fabric_beta_distribution_notification == "No" ] ; then
 	fabric_beta_distribution_notification=false
 fi
 
-pwd
-ls -l
+wget https://github.com/manuelgon47/bitrise-step-fabric-crashlytics-deployer/blob/master/crashlytics/crashlytics-devtools.jar
+chmod a+x crashlytics-devtools.jar
 
-java -jar ./crashlytics/crashlytics-devtools.jar \
+java -jar ./crashlytics-devtools.jar \
  -apiKey $fabric_api_key \
  -apiSecret $fabric_build_secret \
  -uploadDist $fabric_apk_path \
