@@ -41,7 +41,7 @@ if [ $fabric_beta_distribution_notification == "No" ] ; then
 	fabric_beta_distribution_notification=false
 fi
 
-wget https://github.com/manuelgon47/bitrise-step-fabric-crashlytics-deployer/raw/test/crashlytics/crashlytics.zip
+wget https://github.com/manuelgon47/bitrise-step-fabric-crashlytics-deployer/raw/master/crashlytics/crashlytics.zip
 unzip crashlytics.zip
 chmod a+x ./crashlytics/crashlytics-devtools.jar
 
