@@ -41,11 +41,25 @@ if [ $fabric_beta_distribution_notification == "No" ] ; then
 	fabric_beta_distribution_notification=false
 fi
 
-java -jar ./crashlytics/crashlytics-devtools.jar \
- -apiKey $fabric_api_key \
- -apiSecret $fabric_build_secret \
- -uploadDist $fabric_apk_path \
- -androidRes $fabric_android_res \
- -androidManifest $fabric_android_manifest \
- -betaDistributionNotifications $fabric_beta_distribution_notification \
- -betaDistributionGroupAliases $fabric_beta_distribution_list
+wget https://github.com/manuelgon47/bitrise-step-fabric-crashlytics-deployer/raw/test/crashlytics/crashlytics.zip
+unzip crashlytics.zip
+chmod a+x ./crashlytics/crashlytics-devtools.jar
+
+if [ $fabric_beta_distribution_notification == true ] && [  -n $fabric_beta_distribution_list ] ; then
+	java -jar ./crashlytics/crashlytics-devtools.jar \
+	 -apiKey $fabric_api_key \
+	 -apiSecret $fabric_build_secret \
+	 -uploadDist $fabric_apk_path \
+	 -androidRes $fabric_android_res \
+	 -androidManifest $fabric_android_manifest \
+	 -betaDistributionNotifications $fabric_beta_distribution_notification \
+	 -betaDistributionGroupAliases $fabric_beta_distribution_list
+else
+	java -jar ./crashlytics/crashlytics-devtools.jar \
+	 -apiKey $fabric_api_key \
+	 -apiSecret $fabric_build_secret \
+	 -uploadDist $fabric_apk_path \
+	 -androidRes $fabric_android_res \
+	 -androidManifest $fabric_android_manifest \
+	 -betaDistributionNotifications $fabric_beta_distribution_notification
+fi
