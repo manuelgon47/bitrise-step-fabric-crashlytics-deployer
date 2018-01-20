@@ -62,5 +62,5 @@ else
 	 -uploadDist $fabric_apk_path \
 	 -androidRes $fabric_android_res \
 	 -androidManifest $fabric_android_manifest \
-	 -betaDistributionNotifications $fabric_beta_distribution_notification \
+	 -betaDistributionNotifications $fabric_beta_distribution_notification
 fi
