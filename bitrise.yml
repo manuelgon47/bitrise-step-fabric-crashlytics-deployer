@@ -9,7 +9,7 @@ app:
   - BITRISE_STEP_ID: fabric-crashlytics-deployer
   - BITRISE_STEP_VERSION: "1.0.0"
   - BITRISE_STEP_GIT_CLONE_URL: https://github.com/manuelgon47/bitrise-step-fabric-crashlytics-deployer
-  - MY_STEPLIB_REPO_FORK_GIT_URL: $MY_STEPLIB_REPO_FORK_GIT_URL
+  - MY_STEPLIB_REPO_FORK_GIT_URL: https://github.com/manuelgon47/bitrise-steplib
   - my_fabric_api_key: $my_fabric_api_key
   - my_fabric_build_secret: $my_fabric_build_secret
   - my_fabric_apk_path: $my_fabric_apk_path
