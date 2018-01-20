@@ -44,14 +44,6 @@ fi
 wget https://github.com/manuelgon47/bitrise-step-fabric-crashlytics-deployer/raw/test/crashlytics/crashlytics.zip
 unzip crashlytics.zip
 chmod a+x ./crashlytics/crashlytics-devtools.jar
-ls -la
-
-if [ $fabric_beta_distribution_notification == true ] ; then
-	echo "fabric_beta_distribution_notification is true"
-fi
-if [  -n $fabric_beta_distribution_list ] ; then
-	echo "fabric_beta_distribution_list is defined to: $fabric_beta_distribution_list"
-fi
 
 if [ $fabric_beta_distribution_notification == true ] && [  -n $fabric_beta_distribution_list ] ; then
 	java -jar ./crashlytics/crashlytics-devtools.jar \
