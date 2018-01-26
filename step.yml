@@ -13,9 +13,9 @@ summary: |
   Deploy to Fabric/Crashlytics beta testing service your apk.
 description: |
   Deploy to Fabric/Crashlytics beta testing service your apk.
-website: https://github.com/manuelgon47/bitrise-step-fabric---crashlytics-deployer
-source_code_url: https://github.com/manuelgon47/bitrise-step-fabric---crashlytics-deployer
-support_url: https://github.com/manuelgon47/bitrise-step-fabric---crashlytics-deployer/issues
+website: https://github.com/manuelgon47/bitrise-step-fabric-crashlytics-deployer
+source_code_url: https://github.com/manuelgon47/bitrise-step-fabric-crashlytics-deployer
+support_url: https://github.com/manuelgon47/bitrise-step-fabric-crashlytics-deployer/issues
 host_os_tags:
   - osx-10.10
   - ubuntu-16.04
