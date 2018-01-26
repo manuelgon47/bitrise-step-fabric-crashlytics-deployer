@@ -72,7 +72,7 @@ inputs:
       description: |
         Set the fabric build secret
       is_required: true
-  - fabric_apk_path:
+  - fabric_apk_path: $BITRISE_APK_PATH
     opts:
       title: "Apk Path"
       summary: "Path to the apk you want to publish on Beta"
